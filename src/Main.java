@@ -7,11 +7,17 @@ public class Main {
 
         System.out.println("Original list: " + numbers);
 
+        // Scenario:
+        // You want to remove elements that meet a certain requirement
+
         System.out.print("Filter (even numbers): ");
         numbers.stream()
                 .filter(number -> number % 2 == 0)
                 .forEach(number -> System.out.print(number + " "));
         System.out.println();
+
+        // Scenario
+        // You want to augment values under a certain degree
 
         System.out.print("Map (square each number): ");
         numbers.stream()
@@ -19,17 +25,26 @@ public class Main {
                 .forEach(number -> System.out.print(number + " "));
         System.out.println();
 
+        // Scenario
+        // You want to arange the list from lowest to highest
+
         System.out.print("Sorted (ascending): ");
         numbers.stream()
                 .sorted()
                 .forEach(number -> System.out.print(number + " "));
         System.out.println();
 
+        // Scenario
+        // You want to unique instances of a value
+
         System.out.print("Distinct (remove duplicates): ");
         numbers.stream()
                 .distinct()
                 .forEach(number -> System.out.print(number + " "));
         System.out.println();
+
+        // Scnario
+        // You want a sum of all values
 
         int sum = numbers.stream()
                 .reduce(0, Integer::sum);
